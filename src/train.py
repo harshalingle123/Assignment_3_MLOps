@@ -70,8 +70,8 @@ def store_model_and_data(model, test_data):
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         time_stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-        model_file = os.path.join(OUTPUT_DIR, f"{time_stamp}_{MODEL_FILENAME}")
-        test_data_file = os.path.join(OUTPUT_DIR, f"{time_stamp}_{TEST_DATA_FILENAME}")
+        model_file = os.path.join(OUTPUT_DIR, f"{MODEL_FILENAME}")
+        test_data_file = os.path.join(OUTPUT_DIR, f"{TEST_DATA_FILENAME}")
 
         joblib.dump(model, model_file)
         joblib.dump(test_data, test_data_file)
